@@ -40,15 +40,46 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
+  margin: 0;
 }
 
 ul,
 ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 address {
   font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+.container {
+  width: 100%;
+  padding: 0 24px;
+  max-width: 1288px;
+  margin: 0 auto;
+}
+.section {
+  padding: 48px 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 /*Link*/
@@ -59,7 +90,6 @@ address {
 }
 .link:hover {
   color: var(--color-brand-light);
-  font-weight: 600;
 }
 
 /*Button*/
@@ -79,13 +109,36 @@ address {
   color: #465929;
 }
 
-/*Hero section*/
+/*Header*/
 
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-top: 32px;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-grow: 1;
+}
+.header-menu {
+  display: flex;
+  gap: 64px;
+  flex-grow: 1;
+  justify-content: center;
+}
+/*Hero section*/
+.hero-section {
+  padding: 272px 0;
+}
 .hero-title {
   color: var(--color-primary-light);
   font-size: 128px;
   font-weight: 900;
   text-align: center;
+  margin-bottom: 0;
 }
 
 .hero-title .accent {
@@ -93,12 +146,15 @@ address {
 }
 
 /*Advantages section*/
-
-.advantages-list {
+.advantages-section {
   background-color: var(--color-brand-light);
-  color: var(--color-primary-light);
+  padding: 16px 0;
+}
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
   font-size: 20px;
-  padding: 16px;
 }
 .section-title {
   color: var(--color-primary-dark);
@@ -112,30 +168,79 @@ address {
 .advantages-item {
   font-size: 20px;
   font-weight: 300;
+  color: var(--color-primary-light);
 }
 
 /*Traditions section*/
 
+.traditions-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.traditions-content {
+  max-width: 710px;
+}
+
+.traditions-section {
+  padding-top: 96px;
+}
+.traditions-title {
+  margin-bottom: 42px;
+}
+
 .traditions-text {
   font-size: 18px;
 }
-
+.traditions-text.limited {
+  max-width: 335px;
+}
 .traditions-text .brand {
   color: var(--color-brand-light);
   font-weight: 600;
+}
+.traditions-img {
+  border-top-right-radius: 400px;
+  border-top-left-radius: 400px;
 }
 .uppercase {
   text-transform: uppercase;
 }
 
 /*Chefs section*/
+.chefs-title {
+  margin-bottom: 80px;
+}
 
 .chef-title {
+  margin-bottom: 16px;
   font-size: 40px;
   font-weight: 600;
 }
+.chefs-list {
+  display: flex;
+  gap: 30px;
+}
+.chef-item {
+  display: flex;
+  gap: 30px;
+}
+.chef-content:nth-child(1) {
+  max-width: 252px;
+}
+.chef-content:nth-child(2) {
+  max-width: 325px;
+}
+.chef-img {
+  border-radius: 4px;
+  border-bottom-left-radius: 400px;
+}
 
 /*Formats section*/
+
+.formats-title {
+  margin-bottom: 80px;
+}
 
 .format-title {
   color: var(--color-primary-light);
@@ -145,6 +250,26 @@ address {
 .format-text {
   font-size: 14px;
   font-weight: 300;
+}
+.formats-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.formats-item {
+  flex-basis: calc((100% - 40px) / 3);
+}
+.format-card {
+  padding: 24px;
+  min-height: 444px;
+  border: 1px solid #000000;
+  border-radius: 16px;
+}
+
+/*Contacts section*/
+
+.contacts-title {
+  margin-bottom: 16px;
 }
 
 /*Footer*/
