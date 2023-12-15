@@ -290,7 +290,34 @@ p {
   border: 1px solid #000000;
   border-radius: 16px;
 }
+
+/*Carousel*/
+
 /*Contacts section*/
+
+.carousel-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--color-primary-dark);
+  cursor: pointer;
+}
+
+.carousel-arrow {
+  fill: var(--color-primary-dark);
+}
+
+.carousel-button:hover {
+  background-color: var(--color-primary-dark);
+}
+.carousel-button:hover .carousel-arrow {
+  fill: var(--color-primary-light);
+}
 
 .contacts-title {
   margin-bottom: 16px;
@@ -320,4 +347,7 @@ p {
 .address-copyright {
   color: var(--color-copyright);
   font-size: 14px;
+}
+.address-icon {
+  fill: var(--color-primary-light);
 }
