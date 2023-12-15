@@ -34,7 +34,14 @@
 }
 
 /*Base*/
-
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 body {
   color: var(--color-primary-dark);
   background-color: var(--color-primary-light);
@@ -51,7 +58,9 @@ ol {
   margin: 0;
   padding: 0;
 }
-
+a {
+  display: inline-block;
+}
 address {
   font-style: normal;
 }
@@ -234,19 +243,22 @@ p {
   font-size: 40px;
   font-weight: 600;
 }
+.chef-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .chefs-list {
   display: flex;
-  gap: 30px;
+  gap: 40px 30px;
+  flex-wrap: wrap;
 }
-.chef-item {
+.chefs-item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+.chef-card {
   display: flex;
   gap: 30px;
-}
-.chef-content:nth-child(1) {
-  max-width: 252px;
-}
-.chef-content:nth-child(2) {
-  max-width: 325px;
 }
 .chef-img {
   border-radius: 4px;
@@ -256,6 +268,12 @@ p {
 }
 
 /*Formats section*/
+
+.formats-container {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
 
 .formats-title {
   margin-bottom: 80px;
@@ -293,12 +311,11 @@ p {
 
 /*Carousel*/
 
-/*Contacts section*/
-
 .carousel-button {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   width: 44px;
   height: 44px;
   padding: 0;
@@ -306,6 +323,9 @@ p {
   background-color: transparent;
   border: 1px solid var(--color-primary-dark);
   cursor: pointer;
+}
+.carousel-button:last-child {
+  transform: rotate(180deg);
 }
 
 .carousel-arrow {
@@ -319,8 +339,42 @@ p {
   fill: var(--color-primary-light);
 }
 
+/*Contacts section*/
+
+.contacts-section {
+  padding-bottom: 96px;
+}
+
 .contacts-title {
   margin-bottom: 16px;
+}
+
+.contacts-container {
+  display: flex;
+  gap: 32px;
+}
+
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-input {
+  border: 1px solid var(--color-copyright);
+  border-radius: 8px;
+  padding: 16px 42px;
+  margin-bottom: 24px;
+  background-color: transparent;
+}
+
+.contacts-input::placeholder {
+  font-size: 16px;
+  color: var(--color-copyright);
+}
+
+.contacts-frame {
+  border-radius: 16px;
+  flex-shrink: 0;
 }
 
 /*Footer*/
@@ -331,8 +385,36 @@ p {
   background-size: cover;
   background-position: center;
   background-color: var(--color-primary-dark);
+  padding: 32px 0;
 }
-
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+.footer-nav,
+.footer-address {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer-list,
+.footer-logo {
+  flex-grow: 1;
+}
+.footer-socials {
+  display: flex;
+  gap: 22px;
+}
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 .address-link {
   color: var(--color-primary-light);
   font-size: 16px;

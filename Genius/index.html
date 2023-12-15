@@ -64,28 +64,32 @@
           Наші найкращі <span class="accent">шеф -кухарі</span>
         </h2>
         <ul class="chefs-list">
-          <li>
-            <article class="chef-item">
+          <li class="chefs-item">
+            <article class="chef-card">
               <img class="chef-img" src="/images/nastya.jpg" alt="Nastya chef">
               <div class="chef-content">
                 <h3 class="chef-title">Настя</h3>
-              <p>Привіт, я Настя!</p>
-              <p>Вже 10 років, я втілюю<br> у життя цікаві та смачні ідеї.</p>
-              <p>Я випічу для вас найсмачніші вироби!</p>
+                <div class="chef-text">
+                  <p>Привіт, я Настя!</p>
+                <p>Вже 10 років, я втілюю<br> у життя цікаві та смачні ідеї.</p>
+                <p>Я випічу для вас<br>найсмачніші вироби!</p>
+                </div>
               </div>
             </article>
           </li>
-          <li>
-            <article class="chef-item">
+          <li class="chefs-item">
+            <article class="chef-card">
               <img class="chef-img" src="/images/vlad.png" alt="Vlad chef">
              <div class="chef-content">
                <h3 class="chef-title">Влад</h3>
-              <p>Привіт, я Влад!</p>
+             <div class="chef-text">
+               <p>Привіт, я Влад!</p>
               <p>
                 Мій кодитерський стаж вже 18 років.SHOP BEKERY - це наша любов, з якою ми ділимось
                 кожен раз з Вами через нашу випічку!
               </p>
               <p>Я зроблю для вас унікальну начинку на будь який смак!</p>
+             </div>
              </div>
             </article>
           </li>
@@ -95,7 +99,8 @@
       <section class="section" id="formats-section">
         <div class="container">
           <h2 class="formats-title section-title centered">Формати</h2>
-          <button class="carousel-button" type="button">
+          <div class="formats-container">
+            <button class="carousel-button" type="button">
             <svg class="carousel-arrow" width="16" height="16">
               <use href="/images/icons.svg#icon-arrow">
 
@@ -144,70 +149,79 @@
               </use>
             </svg>
           </button>
+          </div>
         </div>
       </section>
-      <section class="section" id="contacts-section">
+      <section class="contacts-section section" id="contacts-section">
         <div class="container">
-          <h2 class="contacts-title section-title">Приєднуйся до мережі пекарень</h2>
-        <p class="contacts-text">Заповни форму, щоб ми звʼязались з тобою!</p>
-        <button class="button">Замовити дзвінок</button>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1638712576473!2d30.48865857628881!3d50.45667308691609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637bfe1717%3A0x5370c2254ad1b952!2z0LLRg9C70LjRhtGPINCh0ZbRh9C-0LLQuNGFINCh0YLRgNGW0LvRjNGG0ZbQsiwgNTQsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1701362785920!5m2!1suk!2sua"
-          width="603"
-          height="595"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <div class="contacts-container">
+            <div class="contacts-content">
+                <h2 class="contacts-title section-title">Приєднуйся до мережі пекарень</h2>
+                <p class="contacts-text">Заповни форму, щоб ми звʼязались з тобою!</p>
+                <form class="contacts-form" action="">
+                  <input class="contacts-input" type="text" placeholder="Ім’я">
+                  <input class="contacts-input" type="number" placeholder="Телефон">
+                  <input class="contacts-input" type="email" placeholder="Електронна пошта">
+                </form>
+                <button class="button">Замовити дзвінок</button>
+          </div>
+       <iframe class="contacts-frame" width="603" height="595" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1796.4723046757933!2d30.512884408995177!3d50.44863472446803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce59e3ab65a7%3A0x694b8565cab02eaf!2z0JfQvtC70L7RgtGWINCy0L7RgNC-0YLQsA!5e0!3m2!1suk!2sua!4v1702657593676!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
         </div>
       </section>
     </main>
     <footer class="footer">
       <div class="container">
-        <nav>
-        <a href="#">
-          <img src="/images/logo.svg" alt="Логотип сучаної пекарні" />
-        </a>
-        <ul>
-          <li><a class="link" href="#">Наші традиції</a></li>
-          <li><a class="link" href="#">Шеф-кухарі</a></li>
-          <li><a class="link" href="#">Формати</a></li>
-          <li><a class="link" href="#">Контакти</a></li>
-        </ul>
-      </nav>
-      <address>
-        <ul>
-          <li><a class="address-link" href="tel:380960000007">+ 38 (096) 000 00 07</a></li>
-          <li>
-            <a class="address-link" href="mailto:shopbakery@gmail.com">shopbakery@gmail.com</a>
-          </li>
-          <li>
-            <a
-              class="address-link"
-              href="https://maps.app.goo.gl/GgAnGCB2JnojJNKF9"
-              target="_blank"
-            >
-              Україна, м. Київ, вул. Січових Стрільців 54
+        <div class="footer-container">
+          <nav class="footer-nav">
+            <div class="footer-logo">
+              <a href="#">
+              <img src="/images/logo.svg" alt="Логотип сучаної пекарні" />
             </a>
-          </li>
-          <li>
-            <a href="#">
-              <svg class="address-icon" width="32" height="32">
-                <use href="/images/icons.svg#icon-facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <svg class="address-icon" width="32" height="32">
-                <use href="/images/icons.svg#icon-instagram"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-        <a href="#" target="_blank">Політика конфіденційності</a>
-        <p class="address-copyright">&copy; 2022 Дані захищені</p>
-      </address>
+            </div>
+            <ul class="footer-list">
+              <li><a class="link" href="#">Наші традиції</a></li>
+              <li><a class="link" href="#">Шеф-кухарі</a></li>
+              <li><a class="link" href="#">Формати</a></li>
+              <li><a class="link" href="#">Контакти</a></li>
+            </ul>
+          </nav>
+          <address class="footer-address">
+            <ul class="footer-list">
+              <li><a class="address-link" href="tel:380960000007">+ 38 (096) 000 00 07</a></li>
+              <li>
+                <a class="address-link" href="mailto:shopbakery@gmail.com">shopbakery@gmail.com</a>
+              </li>
+              <li>
+                <a
+                  class="address-link"
+                  href="https://maps.app.goo.gl/GgAnGCB2JnojJNKF9"
+                  target="_blank"
+                >
+                  Україна, м. Київ, вул. Січових Стрільців 54
+                </a>
+              </li>
+              <li>
+                <div class="footer-socials">
+                  <a href="#">
+                  <svg class="address-icon" width="32" height="32">
+                    <use href="/images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg class="address-icon" width="32" height="32">
+                    <use href="/images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+                </div>
+            </li>
+            </ul>
+           <div class="footer-copyright">
+             <a class="link" href="#" target="_blank">Політика конфіденційності</a>
+              <p class="address-copyright">&copy; 2022 Дані захищені</p>
+           </div>
+          </address>
+        </div>
       </div>
     </footer>
   </body>
