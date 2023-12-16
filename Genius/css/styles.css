@@ -60,6 +60,7 @@ ol {
 }
 a {
   display: inline-block;
+  color: inherit;
 }
 address {
   font-style: normal;
@@ -228,7 +229,7 @@ p {
 /*Chefs section*/
 .chefs-title {
   margin: 0 auto 80px auto;
-  max-width: 535px;
+  position: relative;
 }
 .chefs-title::before,
 .chefs-title::after {
@@ -236,6 +237,14 @@ p {
   width: 352px;
   border: 2px solid var(--color-brand-light);
   content: "";
+  position: absolute;
+  bottom: 24px;
+}
+.chefs-title::before {
+  left: 0;
+}
+.chefs-title::after {
+  right: 0;
 }
 
 .chef-title {
@@ -359,7 +368,7 @@ p {
   flex-direction: column;
 }
 
-.contacts-input {
+.input {
   border: 1px solid var(--color-copyright);
   border-radius: 8px;
   padding: 16px 42px;
@@ -386,6 +395,26 @@ p {
   background-position: center;
   background-color: var(--color-primary-dark);
   padding: 32px 0;
+  position: relative;
+}
+.footer::before,
+.footer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+}
+.footer::before {
+  background-image: url(/images/decor-bread-small.png);
+  left: 0;
+  width: 180px;
+  height: 120px;
+  background-repeat: no-repeat;
+}
+.footer::after {
+  background-image: url(/images/decor-bread-large.png);
+  right: 0;
+  width: 380px;
+  height: 180px;
 }
 .footer-container {
   display: flex;
@@ -432,4 +461,67 @@ p {
 }
 .address-icon {
   fill: var(--color-primary-light);
+}
+
+/*Modal*/
+
+.backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal {
+  height: 880px;
+  width: 880px;
+  border-radius: 32px;
+  background-color: var(--color-primary-light);
+  padding: 128px;
+  text-align: center;
+  overflow: auto;
+  position: relative;
+}
+.modal-btn-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+.modal-title {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 130%;
+  margin-bottom: 8px;
+}
+.modal-text {
+  font-size: 18px;
+  margin-bottom: 72px;
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-form .input {
+  margin-bottom: 32px;
+}
+.modal-button {
+  margin-bottom: 24px;
+}
+.modal-polytics {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 146%;
+}
+.modal-link {
+  text-decoration: underline;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  display: none;
 }

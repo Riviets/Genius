@@ -21,7 +21,7 @@
           <li><a class="link" href="#contacts-section">Контакти</a></li>
         </ul>
       </nav>
-      <button class="button" type="button">Замовити дзвінок</button>
+      <button class="button modal-btn-open" type="button">Замовити дзвінок</button>
        </div>
      </div>
     </header>
@@ -61,7 +61,7 @@
       <div class="container">
         <section class="section" id="chefs-section">
         <h2 class="chefs-title section-title centered">
-          Наші найкращі <span class="accent">шеф -кухарі</span>
+          Наші найкращі<br><span class="accent">шеф -кухарі</span>
         </h2>
         <ul class="chefs-list">
           <li class="chefs-item">
@@ -159,9 +159,9 @@
                 <h2 class="contacts-title section-title">Приєднуйся до мережі пекарень</h2>
                 <p class="contacts-text">Заповни форму, щоб ми звʼязались з тобою!</p>
                 <form class="contacts-form" action="">
-                  <input class="contacts-input" type="text" placeholder="Ім’я">
-                  <input class="contacts-input" type="number" placeholder="Телефон">
-                  <input class="contacts-input" type="email" placeholder="Електронна пошта">
+                  <input class="input" type="text" placeholder="Ім’я">
+                  <input class="input" type="number" placeholder="Телефон">
+                  <input class="input" type="email" placeholder="Електронна пошта">
                 </form>
                 <button class="button">Замовити дзвінок</button>
           </div>
@@ -224,5 +224,19 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop">
+      <div class="modal">
+        <button class="modal-btn-close" type="button">Close</button>
+        <h2 class="modal-title">Замовити дзвінок</h2>
+        <p class="modal-text">Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
+        <form class="modal-form" action="">
+          <input class="input" type="text" placeholder="Ім’я">
+          <input class="input" type="number" placeholder="Телефон">
+          <input class="input" type="email" placeholder="Електронна пошта">
+        </form>
+        <button type="button" class="modal-button button">Замовити дзвінок</button>
+        <p class="modal-polytics">Натискаючи на кнопку я погоджуюсь <a class="modal-link" href="#">з політикою конфіденційності</a></p>
+      </div>
+    </div>
   </body>
 </html>
