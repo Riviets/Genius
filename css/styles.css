@@ -99,6 +99,7 @@ p {
 .link {
   color: var(--color-primary-light);
   text-decoration: none;
+  transition: color 0.3s;
 }
 .link:hover {
   color: var(--color-brand-normal);
@@ -123,6 +124,12 @@ p {
 
 /*Header*/
 
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
 .header-container {
   display: flex;
   align-items: center;
@@ -144,7 +151,13 @@ p {
 /*Hero section*/
 .hero-section {
   padding: 272px 0;
-  background-image: url(/images/hero-section-bg.jpg);
+  background-image: linear-gradient(
+      103deg,
+      rgba(18, 18, 17, 0.78) 2.03%,
+      rgba(18, 18, 17, 0.6) 58.46%,
+      rgba(18, 18, 17, 0) 90.36%
+    ),
+    url(/images/hero-section-bg.jpg);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -316,6 +329,10 @@ p {
   height: 444px;
   border: 1px solid #000000;
   border-radius: 16px;
+  transition: transform 0.3s;
+}
+.format-card:hover {
+  transform: scale(1.05);
 }
 
 /*Carousel*/
@@ -333,7 +350,7 @@ p {
   border: 1px solid var(--color-primary-dark);
   cursor: pointer;
 }
-.carousel-button:last-child {
+.carousel-button.next {
   transform: rotate(180deg);
 }
 
@@ -368,14 +385,21 @@ p {
   flex-direction: column;
 }
 
-.input {
+.form-input {
   border: 1px solid var(--color-copyright);
   border-radius: 8px;
   padding: 16px 42px;
   margin-bottom: 24px;
   background-color: transparent;
+  width: 100%;
 }
-
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-brand-normal);
+}
+.form-input:focus::placeholder {
+  color: var(--color-primary-dark);
+}
 .contacts-input::placeholder {
   font-size: 16px;
   color: var(--color-copyright);
@@ -475,11 +499,20 @@ p {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  display: none;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.backdrop.is-hidden {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 .modal {
-  height: 880px;
-  width: 880px;
+  height: 100%;
+  width: 100%;
+  max-height: 880px;
+  max-width: 880px;
   border-radius: 32px;
   background-color: var(--color-primary-light);
   padding: 128px;
@@ -519,10 +552,4 @@ p {
 }
 .modal-link {
   text-decoration: underline;
-}
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  display: none;
 }
