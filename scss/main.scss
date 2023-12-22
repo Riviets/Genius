@@ -1,0 +1,30 @@
+@import url(/scss/utils/_fonts.scss);
+@import url(/scss/utils/_variables.scss);
+@import url(/scss/_base.scss);
+@import url(/scss/utils/_utils.scss);
+
+@import url(/scss/components/_advantages-section.scss);
+@import url(/scss/components/_buttons.scss);
+@import url(/scss/components/_carousel.scss);
+@import url(/scss/components/_chefs-section.scss);
+@import url(/scss/components/_contacts-section.scss);
+@import url(/scss/components/_footer.scss);
+@import url(/scss/components/_formats-section.scss);
+@import url(/scss/components/_header.scss);
+@import url(/scss/components/_hero-section.scss);
+@import url(/scss/components/_links.scss);
+@import url(/scss/components/_modal.scss);
+@import url(/scss/components/_traditions-section.scss);
+
+@import url(/scss/utils/_mixins.scss);
+
+.container {
+    width: 100%;
+    padding: 0 24px;
+    max-width: 1288px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 48px 0;
+}
