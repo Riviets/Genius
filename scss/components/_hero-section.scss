@@ -8,16 +8,12 @@
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
-}
 
-.hero-title {
-    color: var(--color-primary-light);
-    font-size: 128px;
-    font-weight: 900;
-    text-align: center;
-    margin-bottom: 0;
-}
-
-.hero-title .accent {
-    color: var(--color-brand-normal);
+    &__title {
+        color: var(--color-primary-light);
+        font-size: 128px;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 0;
+    }
 }

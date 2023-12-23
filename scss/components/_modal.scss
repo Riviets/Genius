@@ -30,45 +30,35 @@
     text-align: center;
     overflow: auto;
     position: relative;
-}
 
-.modal-btn-close {
-    position: absolute;
-    top: 40px;
-    right: 40px;
-}
+    &__title {
+        font-size: 60px;
+        font-weight: 900;
+        line-height: 130%;
+        margin-bottom: 8px;
+    }
 
-.modal-title {
-    font-size: 60px;
-    font-weight: 900;
-    line-height: 130%;
-    margin-bottom: 8px;
-}
+    &__text {
+        font-size: 18px;
+        margin-bottom: 72px;
+    }
 
-.modal-text {
-    font-size: 18px;
-    margin-bottom: 72px;
-}
+    &-btn-close {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
 
-.modal-form {
-    display: flex;
-    flex-direction: column;
-}
+    &__form {
+        display: flex;
+        flex-direction: column;
 
-.modal-form .input {
-    margin-bottom: 32px;
-}
+        &-field {
+            margin-bottom: 32px;
+        }
+    }
 
-.modal-button {
-    margin-bottom: 24px;
-}
-
-.modal-polytics {
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 146%;
-}
-
-.modal-link {
-    text-decoration: underline;
+    &__button {
+        margin-bottom: 24px;
+    }
 }

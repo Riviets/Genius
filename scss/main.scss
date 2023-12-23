@@ -1,22 +1,25 @@
-@import url(/scss/utils/_fonts.scss);
-@import url(/scss/utils/_variables.scss);
-@import url(/scss/_base.scss);
-@import url(/scss/utils/_utils.scss);
+@import 'utils/fonts';
+@import 'utils/variables';
+@import 'base';
+@import 'utils/utils';
+@import 'utils/texts';
 
-@import url(/scss/components/_advantages-section.scss);
-@import url(/scss/components/_buttons.scss);
-@import url(/scss/components/_carousel.scss);
-@import url(/scss/components/_chefs-section.scss);
-@import url(/scss/components/_contacts-section.scss);
-@import url(/scss/components/_footer.scss);
-@import url(/scss/components/_formats-section.scss);
-@import url(/scss/components/_header.scss);
-@import url(/scss/components/_hero-section.scss);
-@import url(/scss/components/_links.scss);
-@import url(/scss/components/_modal.scss);
-@import url(/scss/components/_traditions-section.scss);
+@import 'components/advantages-section';
+@import 'components/buttons';
+@import 'components/carousel';
+@import 'components/chefs-section';
+@import 'components/contacts-section';
+@import 'components/footer';
+@import 'components/formats-section';
+@import 'components/header';
+@import 'components/hero-section';
+@import 'components/input';
+@import 'components/links';
+@import 'components/modal';
+@import 'components/section';
+@import 'components/traditions-section';
 
-@import url(/scss/utils/_mixins.scss);
+@import 'utils/mixins';
 
 .container {
     width: 100%;
