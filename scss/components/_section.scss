@@ -1,6 +1,10 @@
 .section {
     padding: 48px 0;
 
+    @media screen and (max-width:$bp-tablet) {
+        padding: 20px 0 !important;
+    }
+
     &__title {
         color: var(--color-primary-dark);
         font-size: 64px;
@@ -11,5 +15,4 @@
             text-align: center;
         }
     }
-
 }

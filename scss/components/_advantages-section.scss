@@ -2,16 +2,38 @@
     background-color: var(--color-brand-normal);
     padding: 16px 0;
 
+    @media screen and (max-width:$bp-tablet) {
+        background-color: var(--color-primary-light);
+        padding: 0;
+    }
+
     &__list {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        text-align: center;
         gap: 40px;
         font-size: 20px;
+
+        @media screen and (max-width:$bp-tablet) {
+            flex-direction: column;
+            gap: 16px;
+            background-color: var(--color-brand-light);
+            margin: 40px 20px;
+            padding: 24px 40px;
+            border-radius: 24px;
+        }
     }
 
     &__item {
         font-size: 20px;
         font-weight: 300;
         color: var(--color-primary-light);
+
+        @media screen and (max-width:$bp-tablet) {
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--color-primary-dark);
+        }
     }
 }

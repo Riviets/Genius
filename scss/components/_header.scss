@@ -18,9 +18,37 @@
     }
 
     &__menu {
-        display: flex;
-        gap: 64px;
-        flex-grow: 1;
-        justify-content: center;
+        display: none;
+
+        @media screen and (min-width:$bp-desktop) {
+
+            display: flex;
+            gap: 64px;
+            flex-grow: 1;
+            justify-content: center;
+        }
+    }
+
+    &__burger {
+        max-width: 24px;
+        max-height: 24px;
+        fill: var(--color-primary-light);
+
+        &-img {
+            max-width: 24px;
+            max-height: 24px;
+        }
+
+        @media screen and (min-width:$bp-desktop) {
+            display: none;
+        }
+    }
+
+    &__btn {
+        display: none;
+
+        @media screen and (min-width:$bp-desktop) {
+            display: block;
+        }
     }
 }
