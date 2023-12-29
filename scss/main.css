@@ -49,9 +49,14 @@ body {
   background-color: var(--color-primary-light);
   font-family: var(--font-poppins);
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.5;
   margin: 0;
+}
+@media screen and (min-width: 1280px) {
+  body {
+    font-weight: 400;
+  }
 }
 
 ul,
@@ -515,7 +520,12 @@ button {
       -ms-flex-align: center;
           align-items: center;
   gap: 40px;
-  padding-top: 32px;
+  padding-top: 16px;
+}
+@media screen and (min-width: 1280px) {
+  .header__container {
+    padding-top: 32px;
+  }
 }
 .header__nav {
   display: -webkit-box;
@@ -748,26 +758,28 @@ button {
   margin-bottom: 24px;
 }
 
-.section {
-  padding: 48px 0;
-}
-@media screen and (max-width: 768px) {
-  .section {
-    padding: 20px 0 !important;
-  }
-}
 .section__title {
-  color: var(--color-primary-dark);
-  font-size: 64px;
-  line-height: 1.3;
+  font-size: 32px;
   font-weight: 900;
+  line-height: 1.5;
+}
+@media screen and (min-width: 1280px) {
+  .section__title {
+    font-size: 64px;
+    line-height: 1.3;
+  }
 }
 .section__title--centered {
   text-align: center;
 }
 
 .traditions-section {
-  padding-top: 96px;
+  padding-top: 40px !important;
+}
+@media screen and (min-width: 768px) {
+  .traditions-section {
+    padding-top: 96px !important;
+  }
 }
 .traditions-section__container {
   display: -webkit-box;
@@ -776,6 +788,9 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 40px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -794,25 +809,26 @@ button {
   }
 }
 .traditions-section__text {
-  font-size: 18px;
+  font-weight: 300;
+  font-size: 16px;
+  max-width: 400px;
 }
 .traditions-section__text--limited {
   max-width: 335px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .traditions-section__text {
-    font-weight: 300;
-    font-size: 16px;
-    max-width: 400px;
+    font-size: 18px;
   }
 }
 .traditions-section__img {
   border-top-right-radius: 400px;
   border-top-left-radius: 400px;
+  display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 480px) {
   .traditions-section__img {
-    display: none;
+    display: block;
   }
 }
 @media screen and (max-width: 768px) {

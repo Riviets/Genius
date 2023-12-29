@@ -7,7 +7,11 @@
         display: flex;
         align-items: center;
         gap: 40px;
-        padding-top: 32px;
+        padding-top: 16px;
+
+        @media screen and (min-width:$bp-desktop) {
+            padding-top: 32px;
+        }
     }
 
     &__nav {
